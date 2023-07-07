@@ -1,11 +1,5 @@
 {
     "version": 2,
-    "routes": [
-      {
-        "src": "/random-quote",
-        "dest": "/random-quote"
-      }
-    ],
     "headers": [
         {
           "source": "/(.*)",
