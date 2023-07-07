@@ -2,10 +2,6 @@
     "version": 2,
     "routes": [
       {
-        "src": "/random-quote",
-        "dest": "app.js"
-      },
-      {
         "src": "/(.*)",
         "dest": "/public/$1"
       }
