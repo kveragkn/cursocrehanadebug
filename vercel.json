@@ -2,8 +2,8 @@
     "version": 2,
     "routes": [
       {
-        "src": "/(.*)",
-        "dest": "/public/$1"
+        "src": "/random-quote",
+        "dest": "app.js"
       }
     ],
     "headers": [
