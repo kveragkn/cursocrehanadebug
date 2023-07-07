@@ -3,7 +3,7 @@
     "routes": [
       {
         "src": "/random-quote",
-        "dest": "app.js"
+        "dest": "/random-quote"
       }
     ],
     "headers": [
