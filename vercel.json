@@ -1,11 +1,13 @@
 {
-    "builds": [
-        { "src": "app.js", "use": "@vercel/node" }
-      ],
+    
       "routes": [
         {
           "src": "/random-quote",
           "dest": "app.js"
+        },
+        {
+          "src": "/(.*)",
+          "dest": "/public/$1"
         }
       ],
     "headers": [
