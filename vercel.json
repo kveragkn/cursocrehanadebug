@@ -1,19 +1,16 @@
 {
     "version": 2,
     "builds": [
-        {
-          "src": "build-command",
-          "use": "@vercel/static-build"
-        }
+        { "src": "api/**/*.js", "use": "@vercel/node" }
       ],
       "routes": [
         {
           "src": "/random-quote",
-          "dest": "app.js"
+          "dest": "/random-quote"
         },
         {
           "src": "/(.*)",
-          "dest": "/public/$1"
+          "dest": "/public/index.html"
         }
       ],
     "headers": [
