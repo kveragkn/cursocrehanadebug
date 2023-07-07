@@ -1,5 +1,21 @@
 {
     "version": 2,
+    "builds": [
+        {
+          "src": "build-command",
+          "use": "@vercel/static-build"
+        }
+      ],
+      "routes": [
+        {
+          "src": "/random-quote",
+          "dest": "app.js"
+        },
+        {
+          "src": "/(.*)",
+          "dest": "/public/$1"
+        }
+      ],
     "headers": [
         {
           "source": "/(.*)",
