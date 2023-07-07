@@ -1,7 +1,21 @@
 {
-    "builds": [
-        { "src": "./app.js", "use": "@vercel/node" }
-      ],
+    "version": 2,
+    "routes": [
+      {
+        "src": "/random-quote",
+        "dest": "app.js"
+      },
+      {
+        "src": "/(.*)",
+        "dest": "/public/$1"
+      }
+    ],
+    "rewrites": [
+      {
+        "source": "/(.*)",
+        "destination": "/$1"
+      }
+    ],
     "headers": [
         {
           "source": "/(.*)",
