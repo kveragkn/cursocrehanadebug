@@ -29,7 +29,7 @@ var quotes = [
     }
 ];
 
-app.get('/api/random-quote', function(req, res) {
+app.get('/random-quote', function(req, res) {
     var randomQuote = getRandomQuote();
 	res.send(randomQuote);
 });
