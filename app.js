@@ -9,6 +9,12 @@ app.use(bodyParser.json());
 app.use(cors({
     origin: 'https://cursocrehanadebug.vercel.app'
   }));
+app.use((req, res, next) => {
+  res.setHeader("Access-Control-Allow-Origin", "*");
+  res.setHeader("Access-Control-Allow-Methods", "POST, GET, PUT");
+  res.setHeader("Access-Control-Allow-Headers", "Content-Type");
+  next();
+})
 app.use(express.static('public'))
 app.listen(process.env.PORT || 3000);
 
@@ -32,9 +38,6 @@ var quotes = [
 ];
 
 app.get('/random-quote', function(req, res) {
-    res.setHeader("Access-Control-Allow-Origin", "*");
-    res.setHeader("Access-Control-Allow-Methods", "GET");
-    res.setHeader("Access-Control-Allow-Headers", "Content-Type");
     var randomQuote = getRandomQuote();
 	res.send(randomQuote);
 });
